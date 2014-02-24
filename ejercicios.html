@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pares,primos,serie fibonacci</title>
+	<script type="text/javascript">
+
+function operadores(tipo)
+{
+	var a = Number(document.getElementById('v1').value);
+	if(isNaN(a) == false )
+	{
+		switch(tipo)
+		{
+			case "pares": var b=0;
+            if(a%2==0){
+		           b=+1
+		           b=a
+		           r=a
+		       alert(r +" es par") ;
+		
+	            }else{
+			      alert(" no es par");
+			         }break;
+	      case "primos": var cont=0,i=0
+           for(i=0;i<=a;i++) 
+            {
+            if((a%i)==0)
+              {cont=cont+1;
+                     } 
+                 }
+
+                if(cont >2){
+ 
+                 alert("no es primo")
+                     }else 
+                          {
+                           alert(r+" es primo")
+ 
+                          }break;
+			case "fibonacci":
+			var e=0,b=1,c=0
+             if(a<=3){
+	                  alert("ingrese un numero mayor que 3")
+	                   var a=prompt("ingrese un numero");
+	                   }if(a>3){
+                      document.write(e+" -"+b)
+                       for(n=3;n<=a;n++) 
+                         {
+
+                         c=e+b
+                           e=b
+                           b=c
+                       document.write(" -"+c)
+ 
+                              }
+	                          }break;
+			default: r = "No existe la opciÃ³n";
+		}
+		//return r;
+		
+	}
+}
+
+
+	</script>
+</head>
+<body>
+	<input type = "number" id = "v1">
+	<br>
+	<button onclick = "operadores ('pares')">
+		numeros pares </button><br>
+    <button onclick = "operadores ('primos')">
+		numeros primos </button><br>
+    <button onclick = "operadores ('fibonacci')">
+		serie fibonacci </button><br>
+	
+</body>
+</html>
